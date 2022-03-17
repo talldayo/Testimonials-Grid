@@ -1,0 +1,185 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* RESET */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* VARIABLES */
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+}
+
+/* BODY */
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    background: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* MAIN */
+main{
+    width: 768px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* UTILITIES */
+.grid{
+    padding: 15px 23.5px;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(88, 87, 87, 0.4);
+}
+
+.profile{
+    display: flex;
+}
+
+.profile img{
+    width: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 13.5px;
+    margin: 15px 0;
+}
+
+p{
+    font-size: 9px;
+    line-height: 13px;
+}
+
+/* DANIEL, JONATHAN & PATRICK */
+.daniel span, .jonathan span, .patrick span{
+    color: var(--light-gray);
+}
+
+.daniel .name p, .jonathan .name p, .patrick .name p{
+    color: hsla(0, 0%, 81%, .5);
+}
+
+.daniel > h1, .jonathan > h1, .patrick > h1{
+    color: var(--light-gray);
+}
+
+.daniel > p, .jonathan > p, .patrick > p{
+    color: hsla(0, 0%, 81%, .7);
+}
+
+/* KIRA & JAENETTE */
+.kira, .jeanette{
+    background: var(--White);
+}
+
+.kira span, .jeanette span{
+    color: var(--Very-dark-grayish);
+}
+
+.kira .name p, .jeanette .name p{
+    color: hsla(217, 19%, 35%, .5);
+}
+
+.kira > h1, .jeanette > h1{
+    color: var(--Very-dark-blackish-blue);
+}
+
+.kira > p, .jeanette > p{
+    color: hsla(217, 19%, 35%, .7);
+}
+
+/* DANIEL */
+.daniel{
+    grid-column: 1/3;
+    background: var(--Moderate-violet) url(images/bg-pattern-quotation.svg) no-repeat top 0 right 50px;
+}
+
+.daniel .profile img{
+    border: 1px solid hsla(0, 0%, 81%, .5)
+}
+
+/* JONATHAN */
+.jonathan{
+    background: var(--Very-dark-grayish);
+}
+
+/* KIRA */
+.kira{
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
+/* PATRICK */
+.patrick{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background: var(--Very-dark-blackish-blue);
+}
+
+/* FOOTER */
+footer{
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+}
+
+footer a{
+    color: #333;
+    font-style: italic;
+    text-decoration: none;
+    transition: font-size, .5s;
+}
+
+footer a:hover{
+    color: var(--Moderate-violet);
+    font-size: 20px;
+}
+
+/* MEDIA QUERY */
+@media(max-width:768px){
+    main{
+        display: flex;
+        flex-direction: column;
+        margin: 50px auto;
+        width: 300px;   
+        font-size: 12px;    
+    }
+
+    .grid{
+        padding: 20px 25px;
+    }
+
+    h1{
+        font-size: 19.1px;
+    }
+
+    p{
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .daniel{
+        background: var(--Moderate-violet) url(images/bg-pattern-quotation.svg) no-repeat top 0 right 25px;
+    }
+
+    footer{
+        bottom: 5px;
+    }
+}
